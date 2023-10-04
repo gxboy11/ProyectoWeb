@@ -1,0 +1,69 @@
+﻿@model ProyectoWeb.Models.Colaborador
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Colaborador</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Cedula_colaborador" class="control-label"></label>
+                <input asp-for="Cedula_colaborador" class="form-control" />
+                <span asp-validation-for="Cedula_colaborador" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nombre_colaborador" class="control-label"></label>
+                <input asp-for="Nombre_colaborador" class="form-control" />
+                <span asp-validation-for="Nombre_colaborador" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Apellidos_colaborador" class="control-label"></label>
+                <input asp-for="Apellidos_colaborador" class="form-control" />
+                <span asp-validation-for="Apellidos_colaborador" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Correo_colaborador" class="control-label"></label>
+                <input asp-for="Correo_colaborador" class="form-control" />
+                <span asp-validation-for="Correo_colaborador" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contrasena_colaborador" class="control-label"></label>
+                <input asp-for="Contrasena_colaborador" class="form-control" />
+                <span asp-validation-for="Contrasena_colaborador" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefono_colaborador" class="control-label"></label>
+                <input asp-for="Telefono_colaborador" class="form-control" />
+                <span asp-validation-for="Telefono_colaborador" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Direccion_colaborador" class="control-label"></label>
+                <input asp-for="Direccion_colaborador" class="form-control" />
+                <span asp-validation-for="Direccion_colaborador" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Salario_colaborador" class="control-label"></label>
+                <input asp-for="Salario_colaborador" class="form-control" />
+                <span asp-validation-for="Salario_colaborador" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

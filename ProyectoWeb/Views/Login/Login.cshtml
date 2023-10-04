@@ -1,0 +1,12 @@
+﻿@model ProyectoWeb.Models.Usuario
+<form asp-controller="Login" asp-action="Login" method="post">
+    <div class="form-group">
+        <label asp-for="Nombre">Nombre de usuario:</label>
+        <input asp-for="Nombre" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Contrasena">Contraseña:</label>
+        <input asp-for="Contrasena" type="password" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+</form>
